@@ -1,30 +1,29 @@
+require 'pry'
 
-# Write your code here.
+def badge_maker(name)
+  "Hello, my name is #{name}."
+end  
 
- def badge_maker(array)
-  "Hello, my name is #{array}."
-end
 
-def batch_badge_creator(speakers)
-  speakers.map do |speaker|
-    badge_maker(speaker)
+def batch_badge_creator(names)
+
+  #create and empty array
+  badge_creator = []
+  #use .each method to iterate on names array
+  names.each do |name| 
+  # store each element in badge_creator array 
+    badge_creator << badge_maker(name)
   end
-end
+  # pass that array to badge_maker function 
+   badge_creator
+end  
 
-
-   def assign_rooms(speakers)
- empty_array = []
+def assign_rooms(speakers)
+  room_numbers = []
   speakers.each_with_index do |speaker,index|
-  empty_array.push( "Hello, #{speaker}! You'll be assigned to room #{index+1}!")
+   room_numbers.push("Hello, #{speaker}! You'll be assigned to room #{index+1}!")
   end
-  return empty_array
- end
-
-def printer(attendees)
-  batch_badge_creator(attendees).each do |value|
-    puts value
-  end
-  assign_rooms(attendees).each do |value|
-    puts value
-  end
+    room_numbers
 end
+
+
