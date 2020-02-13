@@ -32,6 +32,7 @@ def printer(guests)
   end
   assign_rooms(guests).each do |return_value|
     puts return_value
+    binding.pry
   end
 end  
 
