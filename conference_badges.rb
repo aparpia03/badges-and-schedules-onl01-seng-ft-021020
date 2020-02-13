@@ -27,7 +27,7 @@ def assign_rooms(speakers)
 end
 
 def printer(guests)
-  batch_badge_creator.each do |return_value|
+  batch_badge_creator(guests).each do |return_value|
     puts return_value
   end
   assign_rooms(guests).each do |return_value|
