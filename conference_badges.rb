@@ -23,7 +23,7 @@ def assign_rooms(speakers)
   speakers.each_with_index do |speaker,index|
    room_numbers.push("Hello, #{speaker}! You'll be assigned to room #{index+1}!")
   end
-     
+     binding.pry
     room_numbers
 end
 
