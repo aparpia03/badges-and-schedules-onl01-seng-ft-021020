@@ -28,6 +28,6 @@ def assign_rooms(speakers)
 end
 
 def printer()
-  
+  assign_rooms.each do |room_numbers|
 end  
 
