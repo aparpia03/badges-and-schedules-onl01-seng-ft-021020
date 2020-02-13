@@ -27,7 +27,7 @@ def assign_rooms(speakers)
     room_numbers
 end
 
-def printer()
+def printer(guests)
   assign_rooms.each do |room_numbers|
 end  
 
